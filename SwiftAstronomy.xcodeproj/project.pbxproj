@@ -10,6 +10,9 @@
 		258F7F8821A122160087D05C /* SwiftAstronomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F7F7E21A122150087D05C /* SwiftAstronomy.framework */; };
 		258F7F8D21A122160087D05C /* SwiftAstronomyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F7F8C21A122160087D05C /* SwiftAstronomyTests.swift */; };
 		258F7F8F21A122160087D05C /* SwiftAstronomy.h in Headers */ = {isa = PBXBuildFile; fileRef = 258F7F8121A122150087D05C /* SwiftAstronomy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		258F7F9921A122F20087D05C /* Calendar+Julian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F7F9821A122F20087D05C /* Calendar+Julian.swift */; };
+		258F7F9A21A122F20087D05C /* Calendar+Julian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F7F9821A122F20087D05C /* Calendar+Julian.swift */; };
+		258F7F9D21A123BD0087D05C /* CalendarJulianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F7F9B21A123BD0087D05C /* CalendarJulianTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 		258F7F8721A122160087D05C /* SwiftAstronomyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftAstronomyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		258F7F8C21A122160087D05C /* SwiftAstronomyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAstronomyTests.swift; sourceTree = "<group>"; };
 		258F7F8E21A122160087D05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		258F7F9821A122F20087D05C /* Calendar+Julian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Julian.swift"; sourceTree = "<group>"; };
+		258F7F9B21A123BD0087D05C /* CalendarJulianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarJulianTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 			children = (
 				258F7F8121A122150087D05C /* SwiftAstronomy.h */,
 				258F7F8221A122150087D05C /* Info.plist */,
+				258F7F9821A122F20087D05C /* Calendar+Julian.swift */,
 			);
 			path = SwiftAstronomy;
 			sourceTree = "<group>";
@@ -81,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				258F7F8C21A122160087D05C /* SwiftAstronomyTests.swift */,
+				258F7F9B21A123BD0087D05C /* CalendarJulianTests.swift */,
 				258F7F8E21A122160087D05C /* Info.plist */,
 			);
 			path = SwiftAstronomyTests;
@@ -148,6 +155,7 @@
 				TargetAttributes = {
 					258F7F7D21A122150087D05C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					258F7F8621A122160087D05C = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258F7F9921A122F20087D05C /* Calendar+Julian.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +210,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258F7F9A21A122F20087D05C /* Calendar+Julian.swift in Sources */,
 				258F7F8D21A122160087D05C /* SwiftAstronomyTests.swift in Sources */,
+				258F7F9D21A123BD0087D05C /* CalendarJulianTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +352,7 @@
 		258F7F9321A122160087D05C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.venj.SwiftAstronomy;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +379,7 @@
 		258F7F9421A122160087D05C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +405,7 @@
 		258F7F9621A122160087D05C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32Y52676KN;
 				INFOPLIST_FILE = SwiftAstronomyTests/Info.plist;
@@ -409,6 +424,7 @@
 		258F7F9721A122160087D05C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32Y52676KN;
 				INFOPLIST_FILE = SwiftAstronomyTests/Info.plist;
